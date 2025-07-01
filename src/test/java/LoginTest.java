@@ -27,8 +27,8 @@ public class LoginTest {
     @DisplayName("Негативный кейс - Вход с неверными данными")
     public void testNegativeLoginWithInvalidCredentials() {
         loginPage.openLoginPage("https://id.rambler.ru/login-20/login");
-        loginPage.login("wrong_username", "wrong_password");
-        assertEquals("Неверная почта", loginPage.getErrorMessage());
+        loginPage.login("wrong_username@rambler.ru", "wrong_password");
+        assertEquals("Неверная почта или пароль", loginPage.getErrorMessage());
     }
 
     /*@Test
